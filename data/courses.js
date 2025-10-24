@@ -1,0 +1,32 @@
+export const courses = [
+  {
+    id: 1,
+    title: "Web Development Bootcamp",
+    description: "Learn full-stack web development with modern tools and practices.",
+    image: "/images/course1u.png",
+    duration: "12 Weeks",
+    level: "Beginner",
+    lessons: 24,
+    instructor: "Ali Raza",
+  },
+  {
+    id: 2,
+    title: "UI/UX Design Fundamentals",
+    description: "Master the fundamentals of user interface and user experience design.",
+    image: "/images/course2.png",
+    duration: "8 Weeks",
+    level: "Intermediate",
+    lessons: 18,
+    instructor: "Sara Ahmed",
+  },
+  {
+    id: 3,
+    title: "Next.js & React Mastery",
+    description: "Build modern, production-ready applications using Next.js and React.",
+    image: "/images/course3.png",
+    duration: "10 Weeks",
+    level: "Advanced",
+    lessons: 20,
+    instructor: "Murtaza Rizvi",
+  },
+];
