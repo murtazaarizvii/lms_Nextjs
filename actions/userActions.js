@@ -27,3 +27,21 @@ export async function loginUser(email, password) {
     return { success: false, message: "Server error" };
   }
 }
+export async function registerUser(name, email, password) {
+  try {
+    await connectDB();
+
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return { success: false, message: "User already exists" };
+    }
+
+    const newUser = new User({ name, email, password });
+    await newUser.save();
+
+    return { success: true, message: "Registration successful" };
+  } catch (error) {
+    console.error("Register error:", error);
+    return { success: false, message: "Server error" };
+  }
+}
